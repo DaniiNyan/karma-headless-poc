@@ -11,7 +11,7 @@ node {
 
   stage('Unit tests') {
    print "Running unit tests"
-   sh "npm"
+   sh "npm test"
   }
 
   stage('Show success message') {
