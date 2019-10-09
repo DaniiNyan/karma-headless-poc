@@ -7,13 +7,14 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
-      require('karma-chrome-launcher'),
+      require('karma-electron'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      useIframe: false
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/karma-electron-poc'),
@@ -25,7 +26,10 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Electron'],
+    preprocessors: {
+      '**/*.js': ['electron']
+    },
     singleRun: false,
     restartOnFileChange: true
   });
