@@ -19,7 +19,7 @@ module.exports = function (config) {
       useIframe: false
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/karma-electron-poc'),
+      dir: require('path').join(__dirname, './coverage/karma-headless-poc'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },

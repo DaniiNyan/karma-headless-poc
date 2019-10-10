@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'karma-electron-poc'`, () => {
+  it(`should have as title 'karma-headless-poc'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('karma-electron-poc');
+    expect(app.title).toEqual('karma-headless-poc');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('karma-electron-poc app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('karma-headless-poc app is running!');
   });
 });

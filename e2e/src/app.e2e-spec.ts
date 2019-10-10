@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('karma-electron-poc app is running!');
+    expect(page.getTitleText()).toEqual('karma-headless-poc app is running!');
   });
 
   afterEach(async () => {

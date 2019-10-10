@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "karma-electron-poc": {
+    "karma-headless-poc": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/karma-electron-poc",
+            "outputPath": "dist/karma-headless-poc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "karma-electron-poc:build"
+            "browserTarget": "karma-headless-poc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "karma-electron-poc:build:production"
+              "browserTarget": "karma-headless-poc:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "karma-electron-poc:build"
+            "browserTarget": "karma-headless-poc:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "karma-electron-poc:serve"
+            "devServerTarget": "karma-headless-poc:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "karma-electron-poc:serve:production"
+              "devServerTarget": "karma-headless-poc:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "karma-electron-poc"
+  "defaultProject": "karma-headless-poc"
 }
