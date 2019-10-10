@@ -3,7 +3,6 @@
 node {
   env.NODEJS_HOME = "${tool 'Node 12.8.0'}"
   env.PATH = "${env.NODEJS_HOME}/bin:${env.PATH}:/usr/local/bin"
-  sh "echo $DISPLAY"
 
   stage('Checkout') {
     checkout scm
