@@ -13,12 +13,9 @@ node {
     sh "npm install"
   }
 
-  wrap([$class: 'Xvfb']) {
-    stage('Unit tests') {
-      print "Running unit tests"
-      sh "echo $DISPLAY"
-      sh "npm test"
-    }
+  stage('Unit tests') {
+    print "Running unit tests"
+    sh "npm test"
   }
 
   stage('Show success message') {
