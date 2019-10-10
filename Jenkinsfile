@@ -3,6 +3,7 @@
 node {
   env.NODEJS_HOME = "${tool 'Node 12.8.0'}"
   env.PATH = "${env.NODEJS_HOME}/bin:${env.PATH}:/usr/local/bin"
+  sh "echo $DISPLAY"
 
   stage('Checkout') {
     checkout scm
@@ -15,8 +16,9 @@ node {
 
   wrap([$class: 'Xvfb']) {
     stage('Unit tests') {
-    print "Running unit tests"
-    sh "npm test"
+      print "Running unit tests"
+      sh "echo $DISPLAY"
+      sh "npm test"
     }
   }
 
